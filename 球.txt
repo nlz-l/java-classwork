@@ -1,0 +1,44 @@
+package ball;
+import java.awt.*;
+import javax.swing.*;
+public class ball {
+	public static void main(String a[]){
+		JFrame f=new JFrame();
+		f.setSize(1440,900);
+		Pane mp=new Pane();
+		f.add(mp);
+		f.setVisible(true);	
+	}
+}
+class Pane extends JPanel{
+	public void paint(Graphics g){
+		super.paint(g);
+		int state=0;int x=100;int y=200;
+		setBackground(new Color(0,0,80));
+		g.setColor(Color.yellow);
+		g.fillOval(x,y,10,10);
+		if(state==0){
+			x++;y++;
+		}
+		if(state==1){
+			x++;y--;
+		}
+		if(state==2){
+			x--;y--;
+		}
+		if(state==3){
+			x--;y++;
+		}
+		if(y>342){
+			if(state==0){
+				state=1;
+			}else{
+				state=2;
+			}
+		}
+		if(x>465){
+			
+		}
+		repaint();
+}
+	}

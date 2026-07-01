@@ -1,0 +1,621 @@
+package test;
+import java.awt.*;
+import javax.swing.*;
+public class ball {
+	public static void main(String a[]){
+		JFrame f=new JFrame();
+		f.setSize(1440,900);
+		Pane mp=new Pane();
+		f.add(mp);
+		f.setVisible(true);	
+	}
+}
+class Pane extends JPanel{
+	int m=0;
+	int state=0;int x=100;int y=200;
+	int x1=x-50;int x2=x+500;int x3=x+500;int x4=x+1000;int x5=x+200;
+	int x6=x+600;int x7=x+700;int x8=x+500;
+	int y1=y+100;int y2=y-100;int y3=y+500;int y4=y-200;int y5=y+600;
+	int y6=y+240;int y7=y+200;int y8=y+300;
+	int state1=3;int state2=1;int state3=1;int state4=0;int state5=0;
+	int state6=2;int state7=3;int state8=2;
+	public void paint(Graphics g){
+		super.paint(g);
+		g.setColor(Color.BLUE);
+		g.fillOval(x,y,10,10);
+		g.fillOval(x1,y1,10,10);
+		g.fillOval(x2,y2,10,10);
+		g.fillOval(x3,y3,10,10);
+		g.fillOval(x4,y4,10,10);
+		g.fillOval(x5,y5,10,10);
+		g.fillOval(x6,y6,10,10);
+		g.fillOval(x7,y7,10,10);
+		g.fillOval(x8,y8,10,10);
+		//0
+		if(state==0){
+			x++;y++;
+		}
+		if(state==1){
+			x++;y--;
+		}
+		if(state==2){
+			x--;y--;
+		}
+		if(state==3){
+			x--;y++;
+		}
+		if(y>860){
+			if(state==0){
+				state=1;
+				setBackground(new Color((int)(Math.random()*255),
+										(int)(Math.random()*255),
+										(int)(Math.random()*255)));
+			}else{
+				state=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x>1430){
+			if(state==1) {
+				state=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y<0) {
+			if(state==2) {
+				state=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x<0) {
+			if(state==3) {
+				state=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		//1
+		if(state1==0){
+			x1++;y1++;
+		}
+		if(state1==1){
+			x1++;y1--;
+		}
+		if(state1==2){
+			x1--;y1--;
+		}
+		if(state1==3){
+			x1--;y1++;
+		}
+		if(y1>860){
+			if(state1==0){
+				state1=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else{
+				state1=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x1>1430){
+			if(state1==1) {
+				state1=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state1=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y1<0) {
+			if(state1==2) {
+				state1=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state1=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x1<0) {
+			if(state1==3) {
+				state1=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state1=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		//2
+		if(state2==0){
+			x2++;y2++;
+		}
+		if(state2==1){
+			x2++;y2--;
+		}
+		if(state2==2){
+			x2--;y2--;
+		}
+		if(state2==3){
+			x2--;y2++;
+		}
+		if(y2>860){
+			if(state2==0){
+				state2=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else{
+				state2=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x2>1430){
+			if(state2==1) {
+				state2=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state2=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y2<0) {
+			if(state2==2) {
+				state2=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state2=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x2<0) {
+			if(state2==3) {
+				state2=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state2=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		//3
+		if(state3==0){
+			x3++;y3++;
+		}
+		if(state3==1){
+			x3++;y3--;
+		}
+		if(state3==2){
+			x3--;y3--;
+		}
+		if(state3==3){
+			x3--;y3++;
+		}
+		if(y3>860){
+			if(state3==0){
+				state3=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else{
+				state3=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x3>1430){
+			if(state3==1) {
+				state3=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state3=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y3<0) {
+			if(state3==2) {
+				state3=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state3=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x3<0) {
+			if(state3==3) {
+				state3=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state3=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		//4
+		if(state4==0){
+			x4++;y4++;
+		}
+		if(state4==1){
+			x4++;y4--;
+		}
+		if(state4==2){
+			x4--;y4--;
+		}
+		if(state4==3){
+			x4--;y4++;
+		}
+		if(y4>860){
+			if(state4==0){
+				state4=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else{
+				state4=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x4>1430){
+			if(state4==1) {
+				state4=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state4=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y4<0) {
+			if(state4==2) {
+				state4=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state4=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x4<0) {
+			if(state4==3) {
+				state4=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state4=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		//5
+		if(state5==0){
+			x5++;y5++;
+		}
+		if(state5==1){
+			x5++;y5--;
+		}
+		if(state5==2){
+			x5--;y5--;
+		}
+		if(state5==3){
+			x5--;y5++;
+		}
+		if(y5>860){
+			if(state5==0){
+				state5=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else{
+				state5=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x5>1430){
+			if(state5==1) {
+				state5=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state5=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y5<0) {
+			if(state5==2) {
+				state5=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state5=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x5<0) {
+			if(state5==3) {
+				state5=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state5=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		//6		
+		if(state6==0){
+			x6++;y6++;
+		}
+		if(state6==1){
+			x6++;y6--;
+		}
+		if(state6==2){
+			x6--;y6--;
+		}
+		if(state6==3){
+			x6--;y6++;
+		}
+		if(y6>860){
+			if(state6==0){
+				state6=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else{
+				state6=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x6>1430){
+			if(state6==1) {
+				state6=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state6=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y6<0) {
+			if(state6==2) {
+				state6=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state6=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x6<0) {
+			if(state6==3) {
+				state6=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state6=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+	//7
+		if(state7==0){
+			x7++;y7++;
+		}
+		if(state7==1){
+			x7++;y7--;
+		}
+		if(state7==2){
+			x7--;y7--;
+		}
+		if(state7==3){
+			x7--;y7++;
+		}
+		if(y7>860){
+			if(state7==0){
+				state7=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else{
+				state7=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x7>1430){
+			if(state7==1) {
+				state7=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state7=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y7<0) {
+			if(state7==2) {
+				state7=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state7=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x7<0) {
+			if(state7==3) {
+				state7=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state7=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+	//8
+		if(state8==0){
+			x8++;y8++;
+		}
+		if(state8==1){
+			x8++;y8--;
+		}
+		if(state8==2){
+			x8--;y8--;
+		}
+		if(state8==3){
+			x8--;y8++;
+		}
+		if(y8>860){
+			if(state8==0){
+				state8=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else{
+				state8=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x8>1430){
+			if(state8==1) {
+				state8=2;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state8=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(y8<0) {
+			if(state8==2) {
+				state8=3;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state8=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		if(x8<0) {
+			if(state8==3) {
+				state8=0;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}else {
+				state8=1;
+				setBackground(new Color((int)(Math.random()*255),
+						(int)(Math.random()*255),
+						(int)(Math.random()*255)));
+			}
+		}
+		repaint();
+        }
+	}

@@ -1,0 +1,3 @@
+module your.module.name {
+    requires java.desktop; // 添加此声明
+}

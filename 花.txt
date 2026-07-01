@@ -1,0 +1,32 @@
+import java.awt.*;
+public class Flower {
+	public static void main(String a[]){
+		Frame f=new Frame();
+		Pane p=new Pane();
+		f.add(p);
+		f.setSize(1200,1000);
+		f.setVisible(true);	
+	}
+}
+class Pane extends Panel{
+	public void paint(Graphics g) {
+		setBackground(new Color(244,242,234));
+		g.setColor(new Color(235,80,126));
+		g.fillOval(200,200,300,300);
+		g.fillOval(499,200,300,300);
+		g.fillOval(200,499,300,300);
+		g.fillOval(499,499,300,300);
+		g.setColor(new Color(24,232,29));
+		g.fillOval(290,290,200,200);		
+		g.fillOval(510,510,200,200);
+		g.fillOval(290,510,200,200);
+		g.fillOval(510,290,200,200);
+		g.setColor(new Color(248,248,160));
+		g.fillOval(380,380,100,100);
+		g.fillOval(520,520,100,100);
+		g.fillOval(380,520,100,100);
+		g.fillOval(520,380,100,100);
+		g.setColor(new Color(239,71,93));
+		g.fillOval(400,400,200,200);
+		}
+}

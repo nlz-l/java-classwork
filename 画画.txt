@@ -1,0 +1,36 @@
+package test;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+public class test {
+	public static void main(String a[]) {
+		JFrame jf =new JFrame();
+		JPane p =new JPane();
+		jf.add(p);
+		jf.setBounds(100,300,700,700);
+		p.addMouseMotionListener(p);
+		jf.setVisible(true);
+	}
+}
+class JPane extends JPanel implements MouseMotionListener{
+	int x=300;
+	int y=500;
+	public void paint(Graphics g) {
+		
+		g.setFont(new Font(null,0,80));
+		g.drawString(".", x, y);
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		x =e.getX();
+		y =e.getY();
+		repaint();
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+} 
