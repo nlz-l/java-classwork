@@ -1,11 +1,29 @@
-# Java Classwork
+# Java 课上练习与期末作品
 
-Course exercises and final work from Java class.
+本项目用于保存 Java 课程中的课堂练习、章节作业和期末作品资料。内容包含文本形式的代码片段、练习说明、图片/音频素材以及期末项目文件。
 
-## Contents
+## 内容概览
 
-- Text-based Java exercise notes and code snippets
-- Chapter 5 exercise assets
-- Final project materials including code, introduction document, video, images, and audio
+```text
+第五章习题/        第五章相关练习与素材
+期末作品/          期末项目代码、说明文档、演示视频、图片和音频等材料
+日月更迭生机盎然/  课程或作品相关素材目录
+*.txt              课堂练习代码或说明文本
+```
 
-This repository keeps source/coursework materials and ignores local IDE/build output.
+根目录下的文本文件包括计算器、小球动画、绘图、星空、马里奥等练习内容，适合回顾课堂案例和基础图形/交互逻辑。
+
+## 推荐环境
+
+- JDK 17 或课程要求的 JDK 版本
+- IntelliJ IDEA、Eclipse 或 VS Code Java 插件
+
+## 使用方式
+
+由于部分代码以 `.txt` 形式保存，运行前可以将对应内容复制到 `.java` 文件中，并根据类名调整文件名。对于完整项目，建议优先查看 `期末作品/` 目录中的说明文档或项目入口。
+
+## 整理建议
+
+- 课堂片段适合按主题阅读，例如计算器、动画、绘图、小游戏
+- 期末作品建议保持代码、素材、文档和视频的相对路径不变
+- 如果后续继续维护，可以把文本代码按主题迁移到 `src/` 目录，方便直接编译运行
