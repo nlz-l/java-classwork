@@ -64,7 +64,3 @@ java Calculator
 
 ---
 
-## 🔗 相关项目
-
-- **Java 学习笔记**：[java-learning-notes](../java-learning-notes/)
-- **OOP 模块**：[oop-extends](../oop-extends/)
